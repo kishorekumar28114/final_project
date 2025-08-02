@@ -1,0 +1,461 @@
+body {
+  background: #181926;
+  color: #f7f7fa;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+input, button, textarea, select {
+  background: #232336;
+  color: #f7f7fa;
+  border: 1px solid #383a4b;
+  border-radius: 4px;
+  padding: 0.5em;
+  margin: 0.2em 0;
+}
+
+button {
+  background: #7f5af0;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+}
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #232336;
+}
+
+h1, h2, h3, h4, h5, h6, label {
+  color: #b5b6d3;
+}
+
+input[type="checkbox"] {
+  accent-color: #7f5af0;
+  width: 1.1em;
+  height: 1.1em;
+}
+.card {
+  background: #232336;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px #0003;
+}
+.auth-form-container {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 350px;
+  margin: 8vh auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid rgba(127, 90, 240, 0.13);
+}
+.auth-form-container h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--primary);
+}
+.auth-form-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.auth-form-container input[type="text"],
+.auth-form-container input[type="password"] {
+  background: var(--input-bg);
+  border: 1.5px solid white;
+  color: var(--foreground);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+.auth-form-container button[type="submit"] {
+  background: #7f5af0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+  cursor: pointer;
+}
+.auth-form-container .toggle-btn {
+  background: none;
+  color: var(--primary);
+  border: none;
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.dashboard-container {
+  max-width: 950px;
+  margin: 3rem auto 0 auto;
+  padding: 0 1.2rem 3rem 1.2rem;
+}
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.dashboard-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.add-btn {
+  background: var(--primary);
+  color: #fff;
+  border: 1.5px solid var(--primary);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.challenge-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 2.2rem;
+  margin-top: 1.5rem;
+}
+.challenge-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 2rem 1.4rem 1.3rem 1.4rem;
+ border: 1.5px solid rgba(127, 90, 240, 0.11);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: relative;
+}
+
+.challenge-card .inline-edit-form {
+  width: 100%;
+  background: none;
+  margin: 0 -1.2rem;
+  padding: 0.2rem 0 0.2rem 0;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.challenge-card .inline-edit-form .challenge-form-modal {
+  position: absolute;
+  background: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  z-index: auto;
+  display: block;
+  animation: none;
+}
+
+.challenge-card .inline-edit-form form {
+  max-width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.challenge-card h3 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.challenge-card ul {
+  margin-top: 0.3rem;
+  margin-bottom: 0.2rem;
+  padding-left: 1.2rem;
+  font-size: 0.97rem;
+  color: #b5b6d3;
+}
+
+.challenge-card .edit-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #7f5af0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.challenge-card .delete-btn {
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  margin-left: 0.7rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.challenge-list > div:last-child {
+  margin-bottom: 2rem;
+}
+.challenge-list .empty {
+  color: #b5b6d3;
+  font-size: 1.1rem;
+  text-align: center;
+  grid-column: 1/-1;
+  margin-top: 2.5rem;
+}
+.challenge-detail {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  max-width: 700px;
+  margin: 3.5rem auto 0 auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border: 1.5px solid rgba(127, 90, 240, 0.13);
+}
+.challenge-detail h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+.challenge-detail > div {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  color: #b5b6d3;
+}
+.challenge-detail .days-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.day-item {
+  background: var(--input-bg);
+  border-radius: 10px;
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: 1.5px solid #232336;
+  position: relative;
+}
+
+.day-item.posted {
+  border: 1.5px solid var(--success);
+  background: rgba(46, 204, 64, 0.10);
+}
+.day-item label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 500;
+  font-size: 1.07rem;
+  color: var(--foreground);
+}
+.day-item input[type="checkbox"] {
+  accent-color: var(--primary);
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 4px;
+  border: 2px solid var(--primary);
+  margin-right: 0.5rem;
+}
+.day-item > div {
+  font-size: 0.97rem;
+  color: #b5b6d3;
+  margin-left: 2.1rem;
+  margin-bottom: 0.1rem;
+}
+
+.challenge-detail button {
+  background: #7f5af0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.3rem;
+  font-size: 1.07rem;
+  font-weight: 600;
+  margin-bottom: 1.3rem;
+  cursor: pointer;
+}
+.challenge-detail .error-msg {
+  color: var(--error);
+  background: rgba(255,107,107,0.08);
+  border: 1px solid var(--error);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 12px #ff6b6b33;
+}
+
+@media (max-width: 700px) {
+  .challenge-detail {
+    padding: 1.1rem 0.5rem 1.1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .challenge-detail h1 {
+    font-size: 1.3rem;
+  }
+  .day-item {
+    padding: 0.7rem 0.5rem;
+  }
+}
+
+.challenge-form-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(24, 25, 38, 0.92);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  animation: fadeIn 0.3s cubic-bezier(.4,2,.6,1);
+}
+
+.challenge-form-modal.edit-mode form {
+  position: fixed;
+  margin-top: 500px;
+  }
+
+.challenge-form-modal form {
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 410px;
+  min-width: 0;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.3rem 2rem 2rem 2rem;
+  min-width: 340px;
+  max-width: 98vw;
+  width: 410px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border: 1.5px solid rgba(127, 90, 240, 0.13);
+  backdrop-filter: blur(16px) saturate(180%);
+  animation: fadeIn 0.7s cubic-bezier(.4,2,.6,1);
+}
+
+.challenge-form-modal h2 {
+  margin-top: 0.1rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--primary);
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 16px #7f5af099, 0 1px 2px #0004;
+  border-bottom: 1.5px solid #35355a44;
+  padding-bottom: 0.5rem;
+}
+
+.challenge-form-modal.edit-mode h2 {
+  color: #fff;
+  background: linear-gradient(90deg, var(--primary) 40%, #a78bfa 100%);
+
+}
+
+.challenge-form-modal label {
+  font-weight: 500;
+  color: var(--foreground);
+  margin-bottom: 0.18rem;
+  margin-top: 0.1rem;
+  font-size: 1.04rem;
+  letter-spacing: 0.01em;
+}
+
+.challenge-form-modal select,
+.challenge-form-modal input[type="number"],
+.challenge-form-modal input[type="text"] {
+  background: var(--input-bg);
+  border: 1.5px solid var(--input-border);
+  color: var(--foreground);
+  border-radius: 8px;
+  padding: 0.67rem 0.8rem;
+  font-size: 0.97rem;
+  outline: none;
+  margin-bottom: 0.13rem;
+  margin-top: 0.01rem;
+}
+
+.challenge-form-modal button[type="submit"] {
+  background: #7f5af0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.85rem 0;
+  font-size: 1.07rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+
+.challenge-form-modal.edit-mode button[type="submit"] {
+  background: #7f5af0;
+  color: #fff;
+}
+.challenge-form-modal button[type="button"] {
+  background: #7f5af0;
+  color: #b5b6d3;
+  border: none;
+  font-size: 1rem;
+  margin-top: 0.7rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.challenge-form-modal button[type="button"]:hover {
+  color: var(--primary);
+}
+.days-fields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem 1.1rem;
+  margin-bottom: 0.3rem;
+}
+.day-field {
+  background: var(--input-bg);
+  border-radius: 10px;
+  padding: 0.7rem 0.7rem 0.6rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border: 1px solid #232336;
+  position: relative;
+  min-width: 0;
+}
+.day-field h4 {
+  font-size: 0.98rem;
+  color: var(--primary);
+  margin-bottom: 0.17rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
